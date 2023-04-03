@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Group]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="Customer.CreateCustomerByUser">
+        <methods>
+          <include name="CrCustByUser"/>
+        </methods>
+      </class> <!-- Customer.CreateCustomerByUser -->
+      <class name="Customer.CreateCustomerIntegration">
+        <methods>
+          <include name="CrCustIntegration"/>
+        </methods>
+      </class> <!-- Customer.CreateCustomerIntegration -->
+      <class name="Customer.CreateCustomerByAdmin">
+        <methods>
+          <include name="CrCustByAdmin"/>
+        </methods>
+      </class> <!-- Customer.CreateCustomerByAdmin -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Group] -->

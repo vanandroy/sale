@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Suite">
+  <test  name="Thread Test">
+    <classes>
+      <class name="Practice_Package.ThreadCountEx1"/>
+      <class name="Practice_Package.ThreadCountEx2"/>
+      <class name="Practice_Package.ThreadCountEx3"/>
+    </classes>
+  </test> <!-- Thread Test -->
+</suite> <!-- Suite -->

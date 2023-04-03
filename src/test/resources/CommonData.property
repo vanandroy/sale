@@ -1,0 +1,8 @@
+browser chrome
+url http://rmgtestingserver/domain/Sales_And_Inventory_System/pages/login.php
+iccurl https://www.icc-cricket.com/rankings/mens/team-rankings/t20i
+mmturl https://www.makemytrip.com/
+ausername unguardable
+apassword admin
+uusername test
+upassword test
