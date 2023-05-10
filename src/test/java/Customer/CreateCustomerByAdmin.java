@@ -63,7 +63,7 @@ public class CreateCustomerByAdmin extends BaseClass {
 		PointOfSalePage pos=new PointOfSalePage(driver);
 		String actualName = pos.selectCustFromDpDwn(fullNme);
 		String expectedName=fullNme;
-		Assert.fail();
+		//Assert.fail();
 		SoftAssert sa=new SoftAssert();
 		sa.assertEquals(actualName, expectedName);
 		sa.assertAll();

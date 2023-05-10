@@ -109,7 +109,7 @@
           <version>${maven.surefire.plugin}</version>
     <configuration>
        <suiteXmlFiles>
-            <suiteXmlFile>CrossBrowser.xml</suiteXmlFile>
+            <suiteXmlFile>ParallelExecution.xml</suiteXmlFile>
        </suiteXmlFiles>
      </configuration>
     </plugin>

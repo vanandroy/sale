@@ -25,7 +25,6 @@
        
       <class name="Customer.CreateCustomerByAdmin"/>
         <class name="Product.AddAndVerifyProduct"/>
-      
          <class name="Transaction.GenerateInvoiceByUser"/>
     </classes>
   </test> <!-- Test -->

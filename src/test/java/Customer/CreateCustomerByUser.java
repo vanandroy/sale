@@ -71,10 +71,10 @@ public class CreateCustomerByUser extends BaseClass {
 		cust.enterSearchTextBox(phoneNumber);
 		String res = cust.searchResult();
 		System.out.println("result "+res);
-		Assert.fail();
-//		SoftAssert sa=new SoftAssert();
-//		sa.assertEquals(res, ph);
-//		sa.assertAll();
+		//Assert.fail();
+		SoftAssert sa=new SoftAssert();
+		sa.assertEquals(res, ph);
+		sa.assertAll();
 //		if(res.contains(ph))
 //		{
 //			System.out.println("Test Passed");

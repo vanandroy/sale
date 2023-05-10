@@ -7,8 +7,8 @@
       <class name="Product.AddAndRemoveProduct"/>
     </classes>
   </test> <!-- Test -->
-  <test thread-count="2" parallel="tests" name="Test">
-	  <parameter name="BROWSER" value="edge"/>
+  <test thread-count="2" parallel="tests" name="Test1">
+	  <parameter name="BROWSER" value="firefox"/>
     <classes>
       <class name="Product.AddAndVerifyProduct"/>
     </classes>
