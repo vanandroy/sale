@@ -23,10 +23,6 @@ public class Icc {
     public static void main(String[] args) throws Throwable {	
 	WebDriverManager.chromedriver().setup();
 	WebDriver driver=new ChromeDriver();
-//    	WebDriverManager.edgedriver().setup();
-//    	WebDriver driver=new EdgeDriver();
-//    	WebDriverManager.firefoxdriver().setup();
-//        WebDriver driver=new FirefoxDriver();
 	FileInputStream fis=new FileInputStream(".\\src\\test\\resources\\CommonData.property");
 	Properties p=new Properties();
 	p.load(fis);
@@ -45,12 +41,6 @@ public class Icc {
 		String rating=ratings.get(i).getText();
 		System.out.println(rank+" "+team+" "+match+" "+point+" "+rating);
 	}
-	/*
-	  String myTeam="India";
-    String indiarat = driver.findElement(By.xpath("//tbody/tr/td[2]/following-sibling::td[3]")).getText();
-    System.out.println(indiarat);
-    */
-
 	driver.close();
 	}
 

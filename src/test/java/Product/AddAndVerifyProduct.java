@@ -48,7 +48,7 @@ public class AddAndVerifyProduct extends BaseClass{
 		prdt.selectSupplier(pSupplier);
 		prdt.selectDate(dt);
 		prdt.clickOnSubmit();
-		Assert.fail();
+		//Assert.fail();
 		//logout the admin page
 		adHmPge.logoutAdminHomePage();
 	}

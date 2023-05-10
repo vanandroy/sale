@@ -10,6 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
@@ -19,16 +20,21 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class MakeMyTrip {
 	
       public static void main(String[] args) throws Throwable {
-//		WebDriverManager.chromedriver().setup();
-//		WebDriver driver=new ChromeDriver();
-    	  WebDriverManager.firefoxdriver().setup();
-      	WebDriver driver=new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		
+		ChromeOptions option=new ChromeOptions();
+		option.addArguments("disable notifiction");
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver=new ChromeDriver(option);
+//    	  WebDriverManager.firefoxdriver().setup();
+//      	WebDriver driver=new FirefoxDriver();
+		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 		driver.manage().window().maximize();
+		
 		FileInputStream fis=new FileInputStream(".\\src\\test\\resources\\CommonData.property");
 		Properties p=new Properties();
 		p.load(fis);
 		driver.get(p.getProperty("mmturl"));
+
 		//driver.findElement(By.xpath("//li[text()='Round Trip']")).click();
         driver.findElement(By.xpath("//span[text()='From']")).click();
 		
@@ -70,6 +76,7 @@ public class MakeMyTrip {
 			}
 		}
 		*/
+		
 		//giving no.of traveller
 		driver.findElement(By.xpath("//p[@data-cy='travellerText']/span/span")).click();
 		driver.findElement(By.xpath("//div[@class='travellers gbTravellers']/div/ul/li[4]")).click();
@@ -77,7 +84,9 @@ public class MakeMyTrip {
 		driver.findElement(By.xpath("//div[@class='travellers gbTravellers']/div[1]/div/div[2]/ul/li[3]")).click();
 		driver.findElement(By.xpath("//div[@class='travellers gbTravellers']/div[1]/ul[2]/li[3]")).click();
 	    driver.findElement(By.xpath("//button[text()='APPLY']")).click();
-		
+//	    WebElement fm1 = driver.findElement(By.id("webklipper-publisher-widget-container-notification-close-div"));
+//	     driver.switchTo().frame(fm1);
+	    driver.quit();
 		
 		 
 		

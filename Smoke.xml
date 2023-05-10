@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Smoke">
+  <test thread-count="5" name="smoke">
+	  <groups>
+		  <run>
+			  <include name="smoke"/>
+		  </run>
+	  </groups>
+    <classes>
+     <class name="Customer.CreateCustomerByUser"/>
+      <class name="Customer.CreateCustomerIntegration"/>
+       <class name="Product.AddAndRemoveProduct"/>
+         <class name="Transaction.CreateTransactionByUser"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="smoke1">
+	  
+	  <groups>
+		  <run>
+			  <include name="smoke"/>
+		  </run>
+	  </groups>
+	  <classes>
+		  <class name="Customer.CreateCustomerByAdmin"/>
+        <class name="Product.AddAndVerifyProduct"/>
+         <class name="Transaction.GenerateInvoiceByUser"/>
+	  </classes>
+  </test>
+</suite> <!-- Smoke -->

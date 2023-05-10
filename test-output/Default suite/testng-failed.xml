@@ -3,17 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Product.AddAndRemoveProduct">
+      <class name="Practice_Package.Goibibo">
         <methods>
-          <include name="configBeforeMethod"/>
-          <include name="configBeforeClass"/>
-          <include name="configAfterMethod"/>
-          <include name="configBeforeSuite"/>
-          <include name="configAfterClass"/>
-          <include name="AddAndRemProduct"/>
-          <include name="configAfterSuite"/>
+          <include name="goibibo"/>
         </methods>
-      </class> <!-- Product.AddAndRemoveProduct -->
+      </class> <!-- Practice_Package.Goibibo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

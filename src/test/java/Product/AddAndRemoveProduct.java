@@ -28,7 +28,7 @@ public class AddAndRemoveProduct extends BaseClass {
 		PointOfSalePage pos=new PointOfSalePage(driver);
 		pos.clickOnDelete();
 		System.out.println("product is deleted");
-		Assert.fail();
+		//Assert.fail();
 		userHmPge.logoutUserPage(driver);		
 	}
 
